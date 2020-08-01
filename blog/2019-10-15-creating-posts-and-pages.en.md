@@ -1,10 +1,10 @@
 ---
-title: 'Creating posts and pages'
-date: '2019-10-15 07:41:34'
+title: Creating posts and pages
 description: See how is super easy to add new posts and pages in this project
+date: '2019-10-15 07:41:34'
+image: /assets/img/06.jpg
 category: Gatsby
-background: '#7d4cdb'
-image: '/assets/img/06.jpg'
+background: '#e58e26'
 ---
 
 ## Adding new content
