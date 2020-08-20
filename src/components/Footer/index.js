@@ -29,17 +29,17 @@ const Footer = () => {
         <p>
           {maintainedBy}{' '}
           <a
-            href="https://twitter.com/_diogorodrigues"
+            href="mailto:fbandeirac@gmail.com"
             target="_blank"
           >
-            @_diogorodrigues
+            Felipe Bandeira
           </a>
           . {contributeMessage}{' '}
           <a
-            href="https://github.com/diogorodrigues/iceberg-gatsby-multilang"
+            href="https://github.com/fbandeirac"
             target="_blank"
           >
-            Github
+          
           </a>
           .
         </p>

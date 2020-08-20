@@ -77,14 +77,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   :root { 
-    --gray-extra-light: #eaeaea; 
+    --gray-extra-light: #dcd5e6; 
     --gray-light: #747d8d;  
-    --gray: #475060;
+    --gray: #233754;
     --gray-dark: #2e333e;
 
-    --primary-color: #0066f9;
+    --primary-color: #6400f9;
     --secondary-color: #2e333e;
-    --thirdy-color: #001ff9;
+    --thirdy-color: #34d1e3;
 
     --body-bg: #FFFFFF; 
 

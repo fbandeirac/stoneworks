@@ -4,97 +4,22 @@ date: 2019-07-01 01:21:23
 page: true
 ---
 
-## What is Lorem Ipsum?
+### Who am I
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+My name is Felipe Bandeira, I'm a very lucky brazilian developer. I say that because I had the luck to find the love of my life at quite a young age (13), even though we would only meet and marry at 22 (she is the first person I talked to online). I'm the father of three loving and energetic kids. I have a few friends that I can really trust, and not long ago I found the job that's not really a job to me. Those are the most precious things in my life, and I consider myself extremely lucky because of them.
 
-[I'm an inline-style link](https://www.google.com)
+### My background
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+My first contact with computers happened  when I was 8, my auntie gave my family a x286 computer, where I learned the basics of command line. A few years later we bought a x586 with Win95, and after getting into trouble a few times for corrupting the system, I learned how to format a computer, I still remember the feeling of relief, happiness and boldness. My first contact with programming happened when I was learning how to use EasyUO, a macroing tool for Ultima Online, the first MMORPG I played. I didn't know it at the time, actually it took me several years to find out, but the scripts I used to create were procedural programming scripts, and I loved to create them and let the computer work for me.
 
-[I'm a reference-style link][arbitrary case-insensitive reference text]
+I didn't always worked as a developer, I worked at many different industries and roles before (food, chemical, retail, aviation, and a few more). Life wasn't easy and I had to take the best job I could, it didn't matter what I had to do. I did several gigs as IT technician, formatting, setting up networks, upgrading hardware, etc.This background taught me to see things from different perspectives, and with that I developed a lot my empathy and conflict management skills, which are very usefull as a dad of three kids! I also learned a lot about respect, responsibility and team work, even when you're not really in a team, I mean, two or more persons working at the same place, they may be a team, they can help each other, even with different roles, even in different companies.
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+### Why the blog?
 
-[You can use numbers for reference-style link definitions][1]
+This blog is the solution I found for a few objectives I had in mind:
 
-Or leave it empty and use the [link text itself].
+- Create a repository to analyze my code evolution: in a manner that I could group them, I wanted to pratice and refactor it later, better understanding and improving my learning process.
+- Contribute to the tech comunity: maybe explaining something in a different way, under a new perspective; maybe posting about a specific problem I've ran into, that required a lot of research (and probably some tweaks on the solution, which itself required even more research); share what I've learned, and with a bit of luck, help someone.
+- Improve my writing skill: I used to write a lot, today i pratically only code. I was searching for a way to write again, and hopefuly, improve my communication.
 
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-### Why do we use it?
-
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-```javascript
-var s = 'JavaScript syntax highlighting'
-alert(s)
-```
-
-```python
-s = "Python syntax highlighting"
-print s
-```
-
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
-
-### Where does it come from?
-
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-Colons can be used to align columns.
-
-| Tables        |      Are      |   Cool |
-| ------------- | :-----------: | -----: |
-| col 3 is      | right-aligned | \$1600 |
-| col 2 is      |   centered    |   \$12 |
-| zebra stripes |   are neat    |    \$1 |
-
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
-
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
-
-### Where can I get some?
-
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hkiLfE22C2Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Three or more...
-
----
-
-Hyphens
-
----
-
-Asterisks
-
----
-
-Underscores
+I thought about creating a youtube chanel, but that's not for me (maybe in the future). The catch is, when we run into a problem and that red light is flashing in our face, is practically impossible to find a solution in a generic video title, in these cases, the good ol' text is unbeatable, so the blog was the choosen one. :)

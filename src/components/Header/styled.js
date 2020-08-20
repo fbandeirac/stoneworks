@@ -29,7 +29,7 @@ export const Container = styled.div`
 export const LogoLink = styled(LocalizedLink)`
   display: inline-block;
   margin-right: 0.5rem;
-  width: 170px;
+  width: 80px;
 `;
 
 export const ButtonMenu = styled.div`
