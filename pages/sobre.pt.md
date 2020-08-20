@@ -1,23 +1,24 @@
 ---
-title: 'Sobre'
-date: 2019-07-01 01:21:23
+title: Sobre
+date: '2020-08-19 10:36:00'
 page: true
 ---
+### Quem sou
 
-### O que é o Lorem Ipsum?
+Me chamo Felipe Bandeira, sou um desenvolvedor brasileiro de muita sorte! Digo isso porque eu tive a sorte de encontrar o amor da minha vida quando ainda era bem jovem (13 anos), ainda que só tenha a conhecido pessoalmente e casado aos 22 (ela é a primeira pessoa com quem eu conversei online). Sou pai de três crianças amorosas e cheias de energia. Tenho alguns amigos que realmente posso confiar, e há não muito tempo encontrei uma profissão que não me faz mais odiar segundas-feiras. Essas são as coisas mais preciosas na minha vida, e eu me considero muito sortudo por causa delas.
 
-O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum.
+### Meu histórico
 
-### Porque é que o usamos?
+Meu primeiro contato com computadores aconteceu quando tinha 8 anos, minha tia deu à minha família um computador x286, no qual aprendi o básico de linha de comando. Alguns anos depois compramos um x586 com Windows 95, e depois de me meter em problemas algumas vezes por corromper o sistema, eu aprendi a formatar o computador, ainda me lembro do sentimento de poder, felicidade, e principalmente, alívio! Meu primeiro contato com programação aconteceu quando estava aprendendo como utilizar o EasyUO, uma ferramenta de automação para o Ultima Online, o primeiro MMORPG que joguei. Eu não sabia na época, e pra ser sincero, demorei vários anos para descobrir, mas os scripts que eu criava eram scripts de programação procedural, e eu amava criar eles e deixar o computador trabalhar por mim.
 
-É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página quando analisa a sua mancha gráfica. Logo, o uso de Lorem Ipsum leva a uma distribuição mais ou menos normal de letras, ao contrário do uso de "Conteúdo aqui, conteúdo aqui", tornando-o texto legível. Muitas ferramentas de publicação electrónica e editores de páginas web usam actualmente o Lorem Ipsum como o modelo de texto usado por omissão, e uma pesquisa por "lorem ipsum" irá encontrar muitos websites ainda na sua infância. Várias versões têm evoluído ao longo dos anos, por vezes por acidente, por vezes propositadamente (como no caso do humor).
+Eu não trabalhei sempre como desenvolvedor, trabalhei em muitas indústrias e cargos diferentes (alimentação, química, varejo, aviação e mais alguns). A vida não foi fácil e eu tive que pegar o melhor trabalho possível, sem pensar no que eu tinha que fazer. Essa experiência me ensinou a ver as coisas de perspectivas diferentes, e com isso eu desenvolvi bastante empatia e aprendi a gerenciar conflitos, o que é muito útil para um pai de três crianças! Também aprendi muito sobre respeito, responsabilidade e trabalho em equipe, afinal, duas ou mais pessoas trabalhando no mesmo local podem ser um time, eles podem se ajudar, mesmo com cargos diferentes, mesmo trabalhando para empresas diferentes.
 
-### De onde é que ele vem?
+### Porque o blog?
 
-Ao contrário da crença popular, o Lorem Ipsum não é simplesmente texto aleatório. Tem raízes numa peça de literatura clássica em Latim, de 45 AC, tornando-o com mais de 2000 anos. Richard McClintock, um professor de Latim no Colégio Hampden-Sydney, na Virgínia, procurou uma das palavras em Latim mais obscuras (consectetur) numa passagem Lorem Ipsum, e atravessando as cidades do mundo na literatura clássica, descobriu a sua origem. Lorem Ipsum vem das secções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), por Cícero, escrito a 45AC. Este livro é um tratado na teoria da ética, muito popular durante a Renascença. A primeira linha de Lorem Ipsum, "Lorem ipsum dolor sit amet..." aparece de uma linha na secção 1.10.32.
+O blog foi a solução que encontrei para alguns objetivos que tinha em mente:
 
-O pedaço mais habitual do Lorem Ipsum usado desde os anos 1500 é reproduzido abaixo para os interessados. As secções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" do Cícero também estão reproduzidos na sua forma original, acompanhados pela sua tradução em Inglês, versões da tradução de 1914 por H. Rackham.
+- Criar um 'repositório' de aprendizados: não algo como o git, uma ferramenta que me permitisse explicar melhor a forma solucionei um determinado problema, criar o meu 'pato de borracha virtual', que permitisse agrupar as soluções por tópicos, de forma que poderia praticar e revisar após algum tempo, compreendendo melhor o meu processo de aprendizado.
+- Contribuir com a comunidade de tecnologia: explicando as coisas de uma perspectiva diferente, postando sobre um problema específico, que tomou muito tempo de pesquisa para achar a solução (normalmente quando ainda tive que fazer alguns ajustes, que exigiram ainda mais pesquisa), compartilhar as coisas que eu aprendi.
+- Melhorar minha habilidade de escrita: antigamente eu escrevia muito, hoje em dia, praticamente só escrevo código. Queria uma forma de retomar esse costume e aprimorar minha comunicação.
 
-### Onde posso arranjar algum?
-
-Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor, ou de palavras aleatórias que nem sequer parecem suficientemente credíveis. Se vai usar uma passagem do Lorem Ipsum, deve ter a certeza que não contém nada de embaraçoso escondido no meio do texto. Todos os geradores de Lorem Ipsum na Internet acabam por repetir porções de texto pré-definido, como necessário, fazendo com que este seja o primeiro verdadeiro gerador na Internet. Usa um dicionário de 200 palavras em Latim, combinado com uma dúzia de modelos de frases, para gerar Lorem Ipsum que pareçam razoáveis. Desta forma, o Lorem Ipsum gerado é sempre livre de repetição, ou de injecção humorística, etc.
+Pensei em criar um canal do youtube, afinal, até onde sei, é a forma de consumo de informação mais utilizada no momento, mas não é bem a minha praia, talvez no futuro. Além do que, quando encontramos um problema e aquela luz vermelha fica piscando no rosto, é praticamente impossível encontrar a solução no título genérico de um vídeo, para isso, o bom e velho texto ainda é imbatível, então o blog foi criado. :)
