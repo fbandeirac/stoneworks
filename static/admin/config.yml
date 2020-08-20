@@ -1,9 +1,9 @@
 backend:
     #name: github # Local
     name: git-gateway # Prod
-    repo: diogorodrigues/iceberg-gatsby-multilang
-    branch: master
-    site_domain: https://iceberg-gatsby-multilang.netlify.com/
+    repo: fbandeirac/stoneworks
+    branch: main
+    site_domain: https://stoneworks.dev/
     
 
 publish_mode: editorial_workflow
@@ -43,6 +43,12 @@ collections:
                         'Imagens',
                         'Others',
                         'Outros',
+                        'Career',
+                        'Carreira',
+                        'DataBase',
+                        'Banco de Dados',
+                        'FrontEnd',
+                        'BackEnd',
                     ],
             }
           - {
@@ -92,6 +98,12 @@ collections:
                         'Imagens',
                         'Others',
                         'Outros',
+                        'Career',
+                        'Carreira',
+                        'DataBase',
+                        'Banco de Dados',
+                        'FrontEnd',
+                        'BackEnd',
                     ],
             }
           - {
