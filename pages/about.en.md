@@ -19,6 +19,6 @@ This blog is the solution I've found for a few objectives I had in mind:
 
 - Create a 'repository' of things learned: not something like git, but a tool that allowed me to explain how I solved a certain problem, creating my own 'virtual rubber duck', with the possibility of grouping the solutions by topic, in a manner that I could practice and refactor it later, improvin the understanding of my learning process.
 - Contribute to the tech community: maybe explaining something in a different way, under a new perspective; maybe posting about a specific problem I've ran into, that required a lot of research (and probably some tweaks on the solution, which itself required even more research); share what I've learned, and with a bit of luck, help someone.
-- Improve my writing skill: I used to write a lot, today i practically only code. I was searching for a way to write again, and hopefuly, improve my communication.
+- Improve my writing skill: I used to write a lot, today i practically only code. I was looking for an opportunity to start to write again and improve my communication skills.
 
-I thought about creating a youtube channel, but that's not for me (maybe in the future). The catch is, when we run into a problem and that red light is flashing in our face, is practically impossible to find a solution in a generic video title, in these cases, the good ol' text is unbeatable, so the blog was the choosen one. :)
+I considered creating a YouTube channel, but that's not for me (maybe in the future). The catch is, when we run into a problem and that red light is flashing in our face, it's almost impossible to find a solution in a generic video title, in these cases, the good ol' text is unbeatable, so the blog was the chosen one. :)
