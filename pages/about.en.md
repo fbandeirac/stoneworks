@@ -17,7 +17,7 @@ I didn't always work as a developer, I worked at many different industries (food
 
 This blog is the solution I've found for a few objectives I had in mind:
 
-- Create a repository to analyze my code evolution: in a manner that I could group them, I wanted to practice and refactor it later, better understanding and improving my learning process.
+- Create a 'repository' of things learned: not something like git, but a tool that allowed me to explain how I solved a certain problem, creating my own 'virtual rubber duck', with the possibility of grouping the solutions by topic, in a manner that I could practice and refactor it later, improvin the understanding of my learning process.
 - Contribute to the tech community: maybe explaining something in a different way, under a new perspective; maybe posting about a specific problem I've ran into, that required a lot of research (and probably some tweaks on the solution, which itself required even more research); share what I've learned, and with a bit of luck, help someone.
 - Improve my writing skill: I used to write a lot, today i practically only code. I was searching for a way to write again, and hopefuly, improve my communication.
 
