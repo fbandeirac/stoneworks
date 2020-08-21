@@ -1,8 +1,8 @@
 { 
   "home": "Home",
 
-  "hello": "Stoneworks - tech, career, life, people.",
-  "subline": "Hello, welcome to my personal-about-professional blog! My name is Felipe Bandeira, I'm posting tips, tricks, problems (hopefully their solutions too) and strugles I encounter in the developer career.",
+  "hello": "Hello, welcome to Stoneworks!",
+  "subline": "My name is Felipe Bandeira, this is my personal-about-professional blog about career, life, people, projects and other related subjects in tech. I'm aware that I may post something wrong, or that goes against some people beliefs. With that in mind, I want to make it clear that I'm open to well-mannered discussions, so if you feel like, get in touch and let's discuss and learn together. :)",
   "latestPosts": "Latest posts",
   "category": "Category", 
   "allPosts": "All Posts",

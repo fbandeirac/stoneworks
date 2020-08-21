@@ -4,6 +4,7 @@ import Navigation from '../Navigation';
 import Languages from '../Languages';
 import ButtonMenu from '../ButtonMenu';
 import Logo from '../Logo';
+import Stoneworks from '../Stoneworks'
 
 import { useMenu } from '../../hooks/menu';
 
@@ -19,6 +20,8 @@ const Header = () => {
         <S.LogoLink to="/" title={home} aria-label={home}>
           <Logo />
         </S.LogoLink>
+
+        <Stoneworks />
 
         <S.NavLanguages>
           <Languages />
