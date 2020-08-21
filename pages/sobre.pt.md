@@ -1,12 +1,12 @@
 ---
-title: 'Sobre'
-date: 2019-07-01 01:21:23
+title: Sobre
+date: 2019-07-01T01:21:23.000Z
 page: true
 ---
 
 ### Quem sou
 
-Me chamo Felipe Bandeira, sou um desenvolvedor brasileiro de muita sorte! Digo isso porque eu tive a sorte de encontrar o amor da minha vida quando ainda era bem jovem (13 anos), ainda que sí tenha a conhecido e casado aos 22 (ela é a primeira pessoa com quem eu conversei online). Sou pai de três crianças amorosas e enérgicas. Tenho alguns amigos que realmente posso confiar, e há não muito tempo encontrei o trabalho que não é bem um trabalho para mim. Essas são as coisas mais preciosas na minha vida, e eu me considero muito sortudo por causa delas.
+Me chamo Felipe Bandeira, sou um desenvolvedor brasileiro de muita sorte! Digo isso porque eu tive a sorte de encontrar o amor da minha vida quando ainda era bem jovem (13 anos), ainda que só tenha a conhecido e casado aos 22 (ela é a primeira pessoa com quem eu conversei online). Sou pai de três crianças amorosas e enérgicas. Tenho alguns amigos que realmente posso confiar, e há não muito tempo encontrei o trabalho que não é bem um trabalho para mim. Essas são as coisas mais preciosas na minha vida, e eu me considero muito sortudo por causa delas.
 
 ### Meu histórico
 
