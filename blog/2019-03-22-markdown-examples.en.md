@@ -58,7 +58,7 @@ When creating a new repository inside GitHub, we're presented the following page
 
 ![Printscreen of the new repository function inside GitHub](/assets/img/23-08-20_new_repo.png "Creating a new repository")
 
-As you can see, GitHub already tells us that this repository is ":sparkles: special :sparkles:". Just mark it as public and initialize with a README, and we're good to go!
+As you can see, GitHub already tells us that this repository is "✨ special ✨". Just mark it as public and initialize with a README, and we're good to go!
 
 After that, we can click on the README file, click on the edit button, and we can edit the file without even downloading it! Nice isn't it? We can change it anywhere, any time, all we need is a browser and internet connection. :)
 
