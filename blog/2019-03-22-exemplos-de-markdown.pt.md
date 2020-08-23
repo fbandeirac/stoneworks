@@ -1,171 +1,78 @@
 ---
-title: 'Exemplos de Markdown'
-date: '2019-03-22 01:21:23'
-description: O Markdown deve ser o mais fácil de ler e escrever o mais possível.
+title: Criando um README do perfil no GitHub
+description: Como ativar essa função e dar o seu toque pessoal ao seu perfil do GitHub.
+date: '2020-08-23 04:21:23'
+image: /assets/img/simple_octocat_computer.png
 category: Markdown
 background: '#353b48'
-image: '/assets/img/03.jpg'
 ---
+Há alguns meses o GitHub lançou uma função que permite aos usuários utilizarem um arquivo README específico a fim de melhorar a forma de interagir com a comunidade. Eu gostei muito, já que é uma maneira ótima de demonstrar um pouco da nossa personalidade e dos nossos objetivos.
 
-O Markdown deve ser o mais fácil de ler e escrever o mais possível.
+Se você quer saber só como ativar essa função, pule para a seção **README do Perfil do GitHub**, se você quer conhecer um pouco mais sobre o que estou falando, continue lendo. :)
 
-A legibilidade, no entanto, é enfatizada acima de tudo. Um documento no formato Markdown deve ser publicado como está, como texto sem formatação, sem parecer ter sido marcado com tags ou instruções de formatação. Embora a sintaxe do Markdown tenha sido influenciada por vários filtros de texto para HTML existentes - incluindo Setext, atx, Textile, reStructuredText, Grutatext e EtText - a maior fonte de inspiração para a sintaxe do Markdown é o formato de email em texto sem formatação.
+## O arquivo README
 
-Para esse fim, a sintaxe de Markdown é composta inteiramente de caracteres de pontuação, caracteres de pontuação que foram cuidadosamente escolhidos para parecer com o que significam. Por exemplo, asteriscos em torno de uma palavra realmente se parecem com _ ênfase _. Listas de remarcação parecem, bem, listas. Até as citações em bloco parecem passagens de texto citadas, desde que você já tenha usado o e-mail.
+Arquivos README normalmente são encontrados em versões de software. Podem possuir nomenclaturas variadas, como ReadMe ou READ.ME, e ainda versões traduzidas como LEAME (es) e LEIAME (pt). O nome normalmente é escrito todo em letras maiúsculas, garantindo que o arquivo fique entre os primeiros listados no diretório em que se encontra.
 
-## Headers
+O objetivo de um arquivo README é conter informações sobre o que está sendo entregue. Tópicos comuns são:
 
-```Markdown
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+* Instruções de configuração, instalação e configuração
+* Informações de licensa e direitos autorais
+* Solução de problemas
+* Créditos
+* Registro de alterações
 
-Alternatively, for H1 and H2, an underline-ish style:
+Adicionar um README a um repositório é uma prática comum. Normalmente possui uma breve explicação do projeto, sua utilização e quaisquer outras informações que o desenvolvedor acredite ser importante, como estar aberto para contribuições, se ainda estão sendo feitas manutenções, etc.
 
-Alt-H1
-======
+Os arquivos são tradicionalmente criados em texto simples (a maioria com extensão .txt, mas podendo até não possuir extensão alguma), mas para repositórios na internet, é preferível a utilização de arquivos Markdown (extensão .md ou .markdown), pois é fácil de utilizar e o resultado é ótimo!
 
-Alt-H2
-------
-```
+## Markdown vs GitHub Markdown
 
-# H1
+Markdown é uma linguagem de marcação, como HTML, porém é muito mais legível quando não está renderizada, e propicia um certo padrão e visual limpo após ser renderizado.
 
-## H2
+Infelizmente, ao contrário do HTML, o Markdown não possui um padrão mundial, o mais próximo disto é o [CommonMark][1]. Após a criação da implementação básica, muitas entidades criaram e implementaram os próprios estilos e funcionalidades. A GitHub é uma delas, e criou a implementação [GitHub Flavored Markdown (GFM)][2], que aceita grande parte da implementação [CommonMark][1], mas possui algumas mudanças.
 
-### H3
+## README do Perfil do GitHub
 
-#### H4
+O README do Perfil do GitHub pode ser utilizado para descrever melhor quem é você, sua conta, ou qualquer coisa que acredite ser interessante para apresentar à pessoa visitando o seu perfil no GitHub, da mesma forma que fazemos com o README de uma aplicação ou projeto.
 
-##### H5
+### A diferença
 
-###### H6
+A imagem abaixo mostra o perfil sem o README do Perfil...
 
-## Lists
+![Um exempĺo de perfil do GitHub sem o README do Perfil](/assets/img/23-08-20_before.png "Minha conta sem o README do Perfil")
 
-```Markdown
-1. First ordered list item
-2. Another item
-⋅⋅* Unordered sub-list.
-1. Actual numbers don't matter, just that it's a number
-⋅⋅1. Ordered sub-list
-4. And another item.
+... e é assim que fica o perfil após adicionar o arquivo:
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+![Perfil do GitHub com README do Perfil](/assets/img/23-08-20_after.png "Minha conta com o README do Perfil")
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+Para utilizar essa função, precisamos:
 
-* Unordered list can use asterisks
-- Or minuses
-+ Or pluses
-```
+* Criar um novo repositório com o mesmo nome de usuário da sua conta
+* Tornar o repositório público
+* Criar um arquivo chamado README.md
 
-1. First ordered list item
-2. Another item
-   ⋅⋅\* Unordered sub-list.
-3. Actual numbers don't matter, just that it's a number
-   ⋅⋅1. Ordered sub-list
-4. And another item.
+Nem um pouco complicado, certo?
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+Quando criamos um novo repositório no GitHub, encontramos a seguinte página, onde podemos fazer quase tudo o que precisamos.
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+![Imagem da tela de criação de novo repositório no GitHub](/assets/img/23-08-20_new_repo.png "Criando um novo repositório")
 
--   Unordered list can use asterisks
+Como podemos ver, o GitHub já avisa que esse repositório é "✨ especial ✨". É só marcar como Público e inicializar com o README, e estamos prontos!
 
-*   Or minuses
+Depois de criado, podemos clicar no arquivo README, clicar no botão de edição, e podemos editar o arquivo sem nem fazer download! Legal não é? Podemos alterar em qualquer lugar, a qualquer momento, tudo o que precisamos é de um navegador e acesso à internet. :)
 
--   Or pluses
+## Escrevendo as coisa tudo
 
-## Links
+Legal, criamos o nosso README do perfil. E agora?
 
-```Markdown
-[I'm an inline-style link](https://www.google.com)
+Agora escrevemos qualquer coisa que quisermos! Como disse, podemos alterar a qualquer momento, e o efeito é imediato, podemos deixar a criatividade voar! Com Markdown podemos colocar links, imagens, tabelas, entre outros, e com o [GFM][2] temos acesso a algumas funcionalidades únicas, como destaque de sintaxe (colorização de código), menção de outros usuários, lista de tarefas e até [emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)!
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+No meu perfil eu quis escrever um pouco sobre mim, meus apelidos, minha situação profissional e no que estou trabalhando. Também coloquei links para redes sociais, o blog e o curriculum.
 
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
+[Esse repositório incrível](https://github.com/kautukkundan/Awesome-Profile-README-templates) possui vários modelos que podemos utilizar para ter idéias e criar um README do perfil maravilhoso.
 
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+Fique à vontade para entrar em contato e mostrar o que você criou! Adoraria ver!
 
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-```
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-## Tables
-
-```Markdown
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
-```
-
-| Tables        |      Are      |   Cool |
-| ------------- | :-----------: | -----: |
-| col 3 is      | right-aligned | \$1600 |
-| col 2 is      |   centered    |   \$12 |
-| zebra stripes |   are neat    |    \$1 |
-
-## Blockquotes
-
-```Markdown
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
-```
-
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
-
-Quote break.
-
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
-
-[Referência 1](https://daringfireball.net/projects/markdown/syntax#philosophy)
-[Referência 2](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+[1]: https://commonmark.org/) "CommonMark"
+[2]: https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown "GitHub Flavoured Markdown"
