@@ -1,7 +1,7 @@
 ---
 title: Creating GitHub Profile README
 description: >-
-  How to activate this feature and give your personal touch to your github
+  How to activate this feature and give your personal touch to your GitHub
   profile.
 date: '2020-08-23 04:21:23'
 image: /assets/img/simple_octocat_computer.png
@@ -30,7 +30,7 @@ These files are traditionally created in plain text (.txt mostly, but sometimes 
 
 ## Markdown vs GitHub Markdown
 
-Markdown is a markup language, just like HTML, but it's way more legible when not rendered, and provides a certain pattern and clean look when rendered. Unfortunately, unlike HTML, Markdown does not have a worldwide pattern, the closest to that is [CommonMark][1]. There's the basic implementation, and after that, many companies created and implemented their styles and functionalities. GitHub is one of them, creating the [GitHub Flavored Markdown (GFM)][2], which accepts much of the [CommonMark][1] implementation but have some tweaks.
+Markdown is a markup language, just like HTML, but it's way more legible when not rendered, and provides a certain pattern and clean look when rendered. Unfortunately, unlike HTML, Markdown does not have a worldwide pattern, the closest to that is [CommonMark][1]. There's the basic implementation, and after that, many companies created and implemented their styles and functionalities. GitHub is one of them, creating the [GitHub Flavored Markdown (GFM)][2], which accepts much of the [CommonMark][1] implementation but has some tweaks.
 
 ## GitHub Profile README
 
@@ -48,7 +48,7 @@ The print below shows a profile without the Profile README...
 
 To use this feature, we need to:
 
-* Create a new repository with the exact same username of your account
+* Create a new repository with the same username of your account
 * Make the repository public
 * Create a file named README.md
 
@@ -58,9 +58,9 @@ When creating a new repository inside GitHub, we're presented the following page
 
 ![Printscreen of the new repository function inside GitHub](/assets/img/23-08-20_new_repo.png "Creating a new repository")
 
-As you can see, GitHub already tell us that this repository is ":sparkles: special :sparkles:". Just mark it as public and initialize with a README, and we're good to go!
+As you can see, GitHub already tells us that this repository is ":sparkles: special :sparkles:". Just mark it as public and initialize with a README, and we're good to go!
 
-After that we can click at the README file, click on the edit button, and we can edit the file without even downloading it! Nice isn't? We can change it anywhere, any time, all we need is a browser and internet connection. :)
+After that, we can click on the README file, click on the edit button, and we can edit the file without even downloading it! Nice isn't it? We can change it anywhere, any time, all we need is a browser and internet connection. :)
 
 ## Writing stuff down
 
