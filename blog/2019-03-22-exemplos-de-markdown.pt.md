@@ -1,6 +1,6 @@
 ---
 title: Criando um README do perfil no GitHub
-description: Como ativar essa função e dar o seu toque pessoal ao seu perfil do GitHub.
+description: Como ativar essa função e dar um toque pessoal ao seu perfil do GitHub.
 date: '2020-08-23 04:21:23'
 image: /assets/img/simple_octocat_computer.png
 category: Markdown
