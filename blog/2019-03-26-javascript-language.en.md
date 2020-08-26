@@ -1,131 +1,83 @@
 ---
-title: 'Javascript Language - Code examples using PrismJS'
-date: '2019-03-26 11:21:56'
-description: JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification.
-category: Javascript
-background: '#e58e26'
-image: '/assets/img/05.jpg'
+title: Controlling device brightness on linux mint
+description: Tips on how to control the brightness of your devices in Ubuntu based systems.
+date: '2020-08-25 12:17:00'
+image: /assets/img/brightness.png
+category: Others
+background: '#bdc3c7'
 ---
+# The burning feeling
 
-JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+Lately I've been spending much more time in front of the computer than before, with the COVID-19 pandemic my eyes doesn't have much relief from staring at screens and a few days ago, I started to feel my eyes burning. I spent the weekend as away from screens as I could, and it got better. At Monday night, after I started working on my personal computer and the pain came back. That day I left my work computer turned on, and so I noticed that the screen from my work computer were way softer than my personal one, with a bright blinding light. I never noticed it before, don't ask me how. Maybe it was only noticeably after my eyes got into so much strain, I have no idea.
 
-Hello World:
+## Where did they hide the brightness manager?
 
-```JS
-console.log("Hello World!");
+Linux Mint is great, I really love it! It's fast, reliable, a lot of things work out of the box, a lot of things doesn't but there's a HUGE community to help, yeah... it's great... but you know... sometimes... somethings... they're just... weird.
+
+I've spent around 10 minutes searching at every possible menu and configuration for a way to manage the brightness of my laptop screen. Then I decided to search online, and I've found that it's located in the Power Management.. Widget!
+
+I disabled it when I installed the distro, because my battery is dead there's some years by now, and the costs of a new one are insane. The Power Management Configuration only have the brightness level for when the computer is idle. I wonder if the menus are different on desktops.
+
+So, I discovered the [**brightnessctl**][1] application, which is a great application! I can't test right now because I don't have a fancy setup full of colors, but this app detected a lot of devices in my computer, and I believe we're able to control the lighting of all of them with it.
+
+It's used on command-line, and for the ones who are afraid of it, don't be. This one is super easy, and what I liked the most, it's available on the official repository, so it's usually safe.
+
+## Installing brightnessctl
+
+The program is available in other distros too, like Alpine, Arch, Fedora and others. The program syntax is the same, but installation and running will probably be different in non ubuntu/debian distros. 
+
+The program runs from a terminal, but don't worry, the syntax is simple and it doesn't have a million command options.
+
+To install, just go to your software manager, search for brightnessctl and install, or from a terminal, run:
+```
+sudo apt update && apt install brightnessctl
+```
+To use it very simple, the syntax is `brightnessctl [options] [operation] [value]`.
+
+Below is the list of what I though to be the most important options:
+```
+  -l, --list			list devices with available brightness controls.
+  -n, --min-value		set minimum brightness, defaults to 1.
+  -s, --save			save state in a temporary file.
+  -r, --restore			restore previous state.
+  -h, --help			print the help list.
+  -d, --device=DEVICE		specify device name (can be a wildcard).
+  -c, --class=CLASS		specify device class.
+```
+The full list is available with the `brightnessctl -h` command.
+
+The first thing we need to do first is to know what devices do we have, so run:
+```
+sudo brightnessctl -l
+```
+The result in this example is:
+```
+Available devices:
+Device 'radeon_bl0' of class 'backlight':
+	Current brightness: 255 (100%)
+	Max brightness: 255
+
+Device 'input4::capslock' of class 'leds':
+	Current brightness: 0 (0%)
+	Max brightness: 1
+
+Device 'input4::scrolllock' of class 'leds':
+	Current brightness: 0 (0%)
+	Max brightness: 1
 ```
 
-A simple recursive function:
+What does that means? The first device is my laptop screen, with the radeon name (my graphics card) and the 'backlight' class. The second and third devices are indicator leds from my keyboard when the capslock and scrolllock are turned on, they have the 'leds' class. 
 
-```JS
-function factorial(n) {
-    if (n === 0)
-        return 1; // 0! = 1
-    return n * factorial(n - 1);
-}
-
-factorial(3); // returns 6
+We can change the device settings by device name OR by class! So if we wanted to light up all the leds at once, we could just run:
 ```
-
-More advanced example:
-
-```JS
-/* Finds the lowest common multiple (LCM) of two numbers */
-function LCMCalculator(x, y) { // constructor function
-    let checkInt = function(x) { // inner function
-        if (x % 1 !== 0)
-            throw new TypeError(x + "is not an integer"); // var a =  mouseX
-
-        return x;
-    };
-
-    this.a = checkInt(x)
-    //   semicolons   ^^^^  are optional, a newline is enough
-    this.b = checkInt(y);
-}
-// The prototype of object instances created by a constructor is
-// that constructor's "prototype" property.
-LCMCalculator.prototype = { // object literal
-    constructor: LCMCalculator, // when reassigning a prototype, set the constructor property appropriately
-    gcd: function() { // method that calculates the greatest common divisor
-        // Euclidean algorithm:
-        let a = Math.abs(this.a), b = Math.abs(this.b), t;
-
-        if (a < b) {
-            // swap variables
-            // t = b; b = a; a = t;
-            [a, b] = [b, a]; // swap using destructuring assignment (ES6)
-        }
-
-        while (b !== 0) {
-            t = b;
-            b = a % b;
-            a = t;
-        }
-
-        // Only need to calculate GCD once, so "redefine" this method.
-        // (Actually not redefinition—it's defined on the instance itself,
-        // so that this.gcd refers to this "redefinition" instead of LCMCalculator.prototype.gcd.
-        // Note that this leads to a wrong result if the LCMCalculator object members "a" and/or "b" are altered afterwards.)
-        // Also, 'gcd' === "gcd", this['gcd'] === this.gcd
-        this['gcd'] = function() {
-            return a;
-        };
-
-        return a;
-    },
-
-    // Object property names can be specified by strings delimited by double (") or single (') quotes.
-    lcm: function() {
-        // Variable names do not collide with object properties, e.g., |lcm| is not |this.lcm|.
-        // not using |this.a*this.b| to avoid FP precision issues
-        let lcm = this.a / this.gcd() * this.b;
-
-        // Only need to calculate lcm once, so "redefine" this method.
-        this.lcm = function() {
-            return lcm;
-        };
-
-        return lcm;
-    },
-
-    toString: function() {
-        return "LCMCalculator: a = " + this.a + ", b = " + this.b;
-    }
-};
-
-// Define generic output function; this implementation only works for Web browsers
-function output(x) {
-    document.body.appendChild(document.createTextNode(x));
-    document.body.appendChild(document.createElement('br'));
-}
-
-// Note: Array's map() and forEach() are defined in JavaScript 1.6.
-// They are used here to demonstrate JavaScript's inherent functional nature.
-[
-    [25, 55],
-    [21, 56],
-    [22, 58],
-    [28, 56]
-].map(function(pair) { // array literal + mapping function
-    return new LCMCalculator(pair[0], pair[1]);
-}).sort((a, b) => a.lcm() - b.lcm()) // sort with this comparative function; => is a shorthand form of a function, called "arrow function"
-    .forEach(printResult);
-
-function printResult(obj) {
-    output(obj + ", gcd = " + obj.gcd() + ", lcm = " + obj.lcm());
-}
+sudo brightnessctl -c led -s 100%
 ```
+To set the screen to 50% of max level, we would run:
+```
+sudo brightnessctl -d radeon_bl0 -s 50%
+```
+The -c stands for class and -d for device, the values can be set with percentage, specific value or delta.
 
-Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web.
-JavaScript enables interactive web pages and is an essential part of web applications. The vast majority of websites use it, and major web browsers have a dedicated JavaScript engine to execute it.
+From my findings, the official repository is [this][1]. There you can find more explanations about the usage, how to set permissions to work without sudo, and get the most recent version.
 
-As a multi-paradigm language, JavaScript supports event-driven, functional, and imperative (including object-oriented and prototype-based) programming styles. It has APIs for working with text, arrays, dates, regular expressions, and the DOM, but the language itself does not include any I/O, such as networking, storage, or graphics facilities. It relies upon the host environment in which it is embedded to provide these features.
-
-Initially only implemented client-side in web browsers, JavaScript engines are now embedded in many other types of host software, including server-side in web servers and databases, and in non-web programs such as word processors and PDF software, and in runtime environments that make JavaScript available for writing mobile and desktop applications, including desktop widgets.
-
-The terms Vanilla JavaScript and Vanilla JS refer to JavaScript not extended by any frameworks or additional libraries. Scripts written in Vanilla JS are plain JavaScript code.
-
-Although there are similarities between JavaScript and Java, including language name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design. JavaScript was influenced by programming languages such as Self and Scheme. The JSON serialization format, used to store data structures in files or transmit them across networks, is based on JavaScript.
-
-[Wikipedia](https://en.wikipedia.org/wiki/JavaScript)
+[1]: (https://github.com/Hummer12007/brightnessctl)
