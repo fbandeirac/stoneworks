@@ -1,131 +1,85 @@
 ---
-title: 'Linguagem JavaScript - Exemplos de códigos usando PrismJS'
-date: '2019-03-26 11:21:56'
-description: JavaScript, frequentemente abreviado como JS, é uma linguagem de script interpretada de alto nível que está em conformidade com a especificação ECMAScript.
-category: Javascript
-background: '#e58e26'
-image: '/assets/img/05.jpg'
+title: Controlando o brilho de dispositivos no linux Mint
+description: >-
+  Dicas de como controlar o brilho dos seus dispositivos em sistemas baseados no
+  Ubuntu.
+date: '2020-08-25 12:21:00'
+image: /assets/img/brightness.png
+category: Others
+background: '#bdc3c7'
 ---
+# A sensação de queimação
 
-JavaScript (/ ˈdʒɑːvəˌskrɪpt /), geralmente abreviado como JS, é uma linguagem de script interpretada de alto nível que está em conformidade com a especificação ECMAScript. O JavaScript possui sintaxe entre colchetes, digitação dinâmica, orientação a objetos com base em protótipo e funções de primeira classe.
+Ultimamente tenho passado muito mais tempo na frente do computador, com a pandemia do COVID-19, meus olhos não tem tido muito descanso das telas, e há alguns dias atrás eu comecei a sentir meus olhos ardendo, queimando. Passei um final de semana evitando ao máximo telas em geral, e o ardor passou. Na segunda-feira à noite, após passar a trabalhar no meu computador pessoal, a dor voltou. Naquele dia eu deixei o meu computador do trabalho ligado, e então eu percebi que a tela do computador do trabalho era muito mais suave do que do meu computador pessoal, que tinha um brilho cegante. Eu nunca tinha percebido, não sei como! Talvez eu só tenha percebido depois de forçar tanto minha vista, mas eu realmente não sei como não notei antes.
 
-Hello World:
+## Onde esconderam o gerenciador de brilho?
 
-```JS
-console.log("Hello World!");
+O Linux Mint é ótimo, eu realmente adoro ele! É rápido, confiável, muitas coisas funcionam sem precisar configurar, algumas não funcionam mas existe uma comunidade ENORME para ajudar, sim... é ótimo... mas sabe... às vezes... algumas coisas... são simplemsente... estranhas.
+
+Eu passei cerca de 20 minutos procurando em todos os menus e configurações possíveis por onde que se configura o brilho da tela do meu notebook. Até que decidi pesquisar online, e descobri que se encontra no Gerenciador de Energia... mas no widget dele!
+
+Eu desabilitei o widget quanto instalei a distribuição, minha bateria morreu há alguns anos e o custo de uma nova é absurdo, então ele era inútil. Na tela de configuração do Gerenciador de Energia só dá para alterar o nível de redução do brilho quando o computador entra em modo de economia de energia/descanso. Me pergunto se o menu é diferente em desktops.
+
+Então li sobre o aplicativo [**brightnessctl**][1], que é ótimo! Eu não consigo testar no momento, porque eu não tenho um equipamento cheio de LEDs coloridos, mas esse programa detectou vários dispositivos no meu computador, e acredito que podemos controlar a iluminação de todos eles com este programa.
+
+## Instalando o brightnessctl
+
+O programa está disponível nos repositórios oficiais, apesar de ser uma versão um pouco antiga, o que é comum. Está disponível em outras distribuições também, como Alpine, Arch, Fedora, entre outros. A sintaxe do programa é a mesma, mas os comandos de instalação provavelmente serão diferentes em distribuições não derivadas do Debian/Ubuntu.
+
+O programa é executado a partir do terminal, mas não se preocupe, a sintaxe é simples e não possui um milhão de opções de comando.
+
+Para instalar, abra o gerenciador de software da sua distribuição, pesquise por brightnessctl e instale, ou execute o seguinte comando a partir do terminal:
+```
+sudo apt update && apt install brightnessctl
+```
+A utilização é bem simples, a sintaxe é `brightnessctl [options] [operation] [value]`.
+
+Abaixo está a lista dos comandos que julguei mais importantes:
+```
+  -l, --list			lista dispositivos passíveis de controle de brilho.
+  -n, --min-value		configura o brilho mínimo, o padrão é 1.
+  -s, --save			salva a configuração em um arquivo temporário.
+  -r, --restore			restaura a configuração anterior.
+  -h, --help			mostra a ajuda/lista de comandos.
+  -d, --device=DEVICE		especifica o nome do dispositivo (pode usar caracter coringa).
+  -c, --class=CLASS		especifica a classe do dispositivo.
+```
+Pode-se consultar a lista completa de comandos com o comando`brightnessctl -h` (em inglês.
+
+A primeira coisa que precisamos é obter uma lista dos dispositivos disponíveis, obtemos essa lista com o comando:
+```
+sudo brightnessctl -l
+```
+O resultado neste exemplo é:
+```
+Available devices:
+Device 'radeon_bl0' of class 'backlight':
+	Current brightness: 255 (100%)
+	Max brightness: 255
+
+Device 'input4::capslock' of class 'leds':
+	Current brightness: 0 (0%)
+	Max brightness: 1
+
+Device 'input4::scrolllock' of class 'leds':
+	Current brightness: 0 (0%)
+	Max brightness: 1
 ```
 
-A simple recursive function:
+Vamos destrinchar um pouco esses resultados.
+- O primeiro dispositivo (device) é a tela do meu notebook, com o nome começando com radeon (minha placa de vídeo), e a classe 'backlight'.
+- O segundo e terceiro dispositivos são LEDs indicadores do teclado para quando as teclas capslock e scroll lock estiverem ativadas, eles possuem a classe 'leds'.
 
-```JS
-function factorial(n) {
-    if (n === 0)
-        return 1; // 0! = 1
-    return n * factorial(n - 1);
-}
-
-factorial(3); // returns 6
+Podemos mudar as configurações do dispositivo pelo nome do dispositivo OU pelo nome da classe. Então, se quisermos ligar todos os LEDs de uma vez, podemos utilizar o comando:
 ```
-
-Examplo mais avançado:
-
-```JS
-/* Finds the lowest common multiple (LCM) of two numbers */
-function LCMCalculator(x, y) { // constructor function
-    let checkInt = function(x) { // inner function
-        if (x % 1 !== 0)
-            throw new TypeError(x + "is not an integer"); // var a =  mouseX
-
-        return x;
-    };
-
-    this.a = checkInt(x)
-    //   semicolons   ^^^^  are optional, a newline is enough
-    this.b = checkInt(y);
-}
-// The prototype of object instances created by a constructor is
-// that constructor's "prototype" property.
-LCMCalculator.prototype = { // object literal
-    constructor: LCMCalculator, // when reassigning a prototype, set the constructor property appropriately
-    gcd: function() { // method that calculates the greatest common divisor
-        // Euclidean algorithm:
-        let a = Math.abs(this.a), b = Math.abs(this.b), t;
-
-        if (a < b) {
-            // swap variables
-            // t = b; b = a; a = t;
-            [a, b] = [b, a]; // swap using destructuring assignment (ES6)
-        }
-
-        while (b !== 0) {
-            t = b;
-            b = a % b;
-            a = t;
-        }
-
-        // Only need to calculate GCD once, so "redefine" this method.
-        // (Actually not redefinition—it's defined on the instance itself,
-        // so that this.gcd refers to this "redefinition" instead of LCMCalculator.prototype.gcd.
-        // Note that this leads to a wrong result if the LCMCalculator object members "a" and/or "b" are altered afterwards.)
-        // Also, 'gcd' === "gcd", this['gcd'] === this.gcd
-        this['gcd'] = function() {
-            return a;
-        };
-
-        return a;
-    },
-
-    // Object property names can be specified by strings delimited by double (") or single (') quotes.
-    lcm: function() {
-        // Variable names do not collide with object properties, e.g., |lcm| is not |this.lcm|.
-        // not using |this.a*this.b| to avoid FP precision issues
-        let lcm = this.a / this.gcd() * this.b;
-
-        // Only need to calculate lcm once, so "redefine" this method.
-        this.lcm = function() {
-            return lcm;
-        };
-
-        return lcm;
-    },
-
-    toString: function() {
-        return "LCMCalculator: a = " + this.a + ", b = " + this.b;
-    }
-};
-
-// Define generic output function; this implementation only works for Web browsers
-function output(x) {
-    document.body.appendChild(document.createTextNode(x));
-    document.body.appendChild(document.createElement('br'));
-}
-
-// Note: Array's map() and forEach() are defined in JavaScript 1.6.
-// They are used here to demonstrate JavaScript's inherent functional nature.
-[
-    [25, 55],
-    [21, 56],
-    [22, 58],
-    [28, 56]
-].map(function(pair) { // array literal + mapping function
-    return new LCMCalculator(pair[0], pair[1]);
-}).sort((a, b) => a.lcm() - b.lcm()) // sort with this comparative function; => is a shorthand form of a function, called "arrow function"
-    .forEach(printResult);
-
-function printResult(obj) {
-    output(obj + ", gcd = " + obj.gcd() + ", lcm = " + obj.lcm());
-}
+sudo brightnessctl -c led -s 100%
 ```
+Para configurar a tela com 50% do brilho máximo, utilizaríamos:
+```
+sudo brightnessctl -d radeon_bl0 -s 50%
+```
+O -c quer dizer classe e -d quer dizer dispositivo, os valores podem ser determinados com porcentagem, valores específicos, ou delta.
 
-Juntamente com HTML e CSS, o JavaScript é uma das principais tecnologias da World Wide Web.
-O JavaScript ativa páginas da web interativas e é uma parte essencial dos aplicativos da web. A grande maioria dos sites o utiliza e os principais navegadores da Web possuem um mecanismo JavaScript dedicado para executá-lo.
+Pelo que pesquisei, o repositório oficial é [esse][1] (em inglês). Nele você pode encontrar a versão mais recente, bem como mais detalhes sobre a utilização, como definir permissões de modo que possa utilizar sem o sudo.
 
-Como uma linguagem de múltiplos paradigmas, o JavaScript suporta estilos de programação orientados a eventos, funcionais e imperativos (incluindo orientação a objetos e protótipo). Possui APIs para trabalhar com texto, matrizes, datas, expressões regulares e o DOM, mas o próprio idioma não inclui nenhuma E / S, como recursos de rede, armazenamento ou elementos gráficos. Ele se baseia no ambiente host em que está incorporado para fornecer esses recursos.
-
-Inicialmente implementado apenas no lado do cliente em navegadores da Web, os mecanismos JavaScript agora estão incorporados em muitos outros tipos de software host, incluindo o lado do servidor em servidores e bancos de dados da Web e em programas não na Web, como processadores de texto e software PDF, e em tempo de execução ambientes que disponibilizam o JavaScript para gravar aplicativos móveis e de desktop, incluindo widgets de desktop.
-
-Os termos Vanilla JavaScript e Vanilla JS referem-se ao JavaScript não estendido por nenhuma estrutura ou biblioteca adicional. Os scripts escritos em Vanilla JS são um código JavaScript simples.
-
-Embora existam semelhanças entre JavaScript e Java, incluindo nome de idioma, sintaxe e respectivas bibliotecas padrão, os dois idiomas são distintos e diferem bastante no design. O JavaScript foi influenciado por linguagens de programação como Self e Scheme. O formato de serialização JSON, usado para armazenar estruturas de dados em arquivos ou transmiti-los pelas redes, é baseado em JavaScript.
-
-[Wikipedia](https://en.wikipedia.org/wiki/JavaScript)
+[1]: (https://github.com/Hummer12007/brightnessctl)
