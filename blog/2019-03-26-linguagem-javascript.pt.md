@@ -16,43 +16,41 @@ Ultimamente tenho passado muito mais tempo na frente do computador, com a pandem
 
 O Linux Mint é ótimo, eu realmente adoro ele! É rápido, confiável, muitas coisas funcionam sem precisar configurar, algumas não funcionam mas existe uma comunidade ENORME para ajudar, sim... é ótimo... mas sabe... às vezes... algumas coisas... são simplemsente... estranhas.
 
-Eu passei cerca de 10 minutos procurando em todos os menus e configurações possíveis por onde que se configura o brilho da tela do meu notebook. Até que decidi pesquisar online, e descobri que se encontra no Gerenciador de Energia... mas no widget dele!
+Eu passei cerca de 20 minutos procurando em todos os menus e configurações possíveis por onde que se configura o brilho da tela do meu notebook. Até que decidi pesquisar online, e descobri que se encontra no Gerenciador de Energia... mas no widget dele!
 
-Eu desabilitei o widget quanto instalei a distribuição, minha bateria morreu há alguns anos e o custo de uma nova é absurdo, então ele era inútil. Na tela de configuração do Gerenciador de Energia só dá para alterar o nível de brilho quando o computador não está sendo utilizado. Me pergunto se o menu é diferente em desktops.
+Eu desabilitei o widget quanto instalei a distribuição, minha bateria morreu há alguns anos e o custo de uma nova é absurdo, então ele era inútil. Na tela de configuração do Gerenciador de Energia só dá para alterar o nível de redução do brilho quando o computador entra em modo de economia de energia/descanso. Me pergunto se o menu é diferente em desktops.
 
-Então, eu acabei descobrindo o aplicativo [**brightnessctl**][1] que é ótimo! Eu não consigo testar no momento, porque eu não tenho um equipamento cheio de frufru e colorido, mas esse programa detectou vários dispositivos no meu computador, e eu acredito que podemos controlar a iluminação de todos eles com este programa.
-
-Uma das coisas que eu mais gostei é que ele está disponível nos repositórios oficiais, o que normalmente significa que é um aplicativo seguro. As outras opções que encontrei eram aplicações de repositórios proprietários, o que eu evito um pouco usar.
-
+Então li sobre o aplicativo [**brightnessctl**][1], que é ótimo! Eu não consigo testar no momento, porque eu não tenho um equipamento cheio de LEDs coloridos, mas esse programa detectou vários dispositivos no meu computador, e acredito que podemos controlar a iluminação de todos eles com este programa.
 
 ## Instalando o brightnessctl
-O programa está disponível em outras distribuições também, como Alpine, Arch, Fedora e outros. A sintaxe do programa é a mesma, mas a instalação e execução provavelmente serão diferentes en distribuições não derivadas do debian/ubuntu.
 
-The program runs from a terminal, but don't worry, the syntax is simple and it doesn't have a million command options.
+O programa está disponível nos repositórios oficiais, apesar de ser uma versão um pouco antiga, o que é comum. Está disponível em outras distribuições também, como Alpine, Arch, Fedora, entre outros. A sintaxe do programa é a mesma, mas os comandos de instalação provavelmente serão diferentes em distribuições não derivadas do Debian/Ubuntu.
 
-To install, just go to your software manager, search for brightnessctl and install, or from a terminal, run:
+O programa é executado a partir do terminal, mas não se preocupe, a sintaxe é simples e não possui um milhão de opções de comando.
+
+Para instalar, abra o gerenciador de software da sua distribuição, pesquise por brightnessctl e instale, ou execute o seguinte comando a partir do terminal:
 ```
 sudo apt update && apt install brightnessctl
 ```
-To use it very simple, the syntax is `brightnessctl [options] [operation] [value]`.
+A utilização é bem simples, a sintaxe é `brightnessctl [options] [operation] [value]`.
 
-Below is the list of what I though to be the most important options:
+Abaixo está a lista dos comandos que julguei mais importantes:
 ```
-  -l, --list			list devices with available brightness controls.
-  -n, --min-value		set minimum brightness, defaults to 1.
-  -s, --save			save state in a temporary file.
-  -r, --restore			restore previous state.
-  -h, --help			print the help list.
-  -d, --device=DEVICE		specify device name (can be a wildcard).
-  -c, --class=CLASS		specify device class.
+  -l, --list			lista dispositivos passíveis de controle de brilho.
+  -n, --min-value		configura o brilho mínimo, o padrão é 1.
+  -s, --save			salva a configuração em um arquivo temporário.
+  -r, --restore			restaura a configuração anterior.
+  -h, --help			mostra a ajuda/lista de comandos.
+  -d, --device=DEVICE		especifica o nome do dispositivo (pode usar caracter coringa).
+  -c, --class=CLASS		especifica a classe do dispositivo.
 ```
-The full list is available with the `brightnessctl -h` command.
+Pode-se consultar a lista completa de comandos com o comando`brightnessctl -h` (em inglês.
 
-The first thing we need to do first is to know what devices do we have, so run:
+A primeira coisa que precisamos é obter uma lista dos dispositivos disponíveis, obtemos essa lista com o comando:
 ```
 sudo brightnessctl -l
 ```
-The result in this example is:
+O resultado neste exemplo é:
 ```
 Available devices:
 Device 'radeon_bl0' of class 'backlight':
@@ -68,18 +66,20 @@ Device 'input4::scrolllock' of class 'leds':
 	Max brightness: 1
 ```
 
-What does that means? The first device is my laptop screen, with the radeon name (my graphics card) and the 'backlight' class. The second and third devices are indicator leds from my keyboard when the capslock and scrolllock are turned on, they have the 'leds' class. 
+Vamos destrinchar um pouco esses resultados.
+- O primeiro dispositivo (device) é a tela do meu notebook, com o nome começando com radeon (minha placa de vídeo), e a classe 'backlight'.
+- O segundo e terceiro dispositivos são LEDs indicadores do teclado para quando as teclas capslock e scroll lock estiverem ativadas, eles possuem a classe 'leds'.
 
-We can change the device settings by device name OR by class! So if we wanted to light up all the leds at once, we could just run:
+Podemos mudar as configurações do dispositivo pelo nome do dispositivo OU pelo nome da classe. Então, se quisermos ligar todos os LEDs de uma vez, podemos utilizar o comando:
 ```
 sudo brightnessctl -c led -s 100%
 ```
-To set the screen to 50% of max level, we would run:
+Para configurar a tela com 50% do brilho máximo, utilizaríamos:
 ```
 sudo brightnessctl -d radeon_bl0 -s 50%
 ```
-The -c stands for class and -d for device, the values can be set with percentage, specific value or delta.
+O -c quer dizer classe e -d quer dizer dispositivo, os valores podem ser determinados com porcentagem, valores específicos, ou delta.
 
-From my findings, the official repository is [this][1]. There you can find more explanations about the usage, how to set permissions to work without sudo, and get the most recent version.
+Pelo que pesquisei, o repositório oficial é [esse][1] (em inglês). Nele você pode encontrar a versão mais recente, bem como mais detalhes sobre a utilização, como definir permissões de modo que possa utilizar sem o sudo.
 
 [1]: (https://github.com/Hummer12007/brightnessctl)
