@@ -1,26 +1,32 @@
 ---
-title: 'Digital image processing'
-date: '2019-04-01 07:41:34'
-description: In computer science, digital image processing is the use of computer algorithms to perform image processing on digital images.
+title: Shrinking image sizes
+description: >-
+  How to use TinyPNG/TinyJPEG to shrink image sizes without (or minimal) quality
+  loss.
+date: '2020-08-30 01:41:00'
+image: /assets/img/tinijpg.png
 category: Images
 background: '#079992'
-image: '/assets/img/01.jpg'
 ---
+The technology is evolving at such a fast pace, most of the time we don't even have the time to assimilate properly the current status and something new appears to keep us constantly amazed.
 
-In computer science, digital image processing is the use of computer algorithms to perform image processing on digital images. As a subcategory or field of digital signal processing, digital image processing has many advantages over analog image processing. It allows a much wider range of algorithms to be applied to the input data and can avoid problems such as the build-up of noise and signal distortion during processing. Since images are defined over two dimensions (perhaps more) digital image processing may be modeled in the form of multidimensional systems.
+I'm from the time when a floppy disk with 1.44 MB of storage was an amazing innovation, a smaller device with around the double of the capacity of the floppies I knew! I remember when my dream was to have a HD with 1 TB of storage, where I could save everything I ever wanted, and never would go through the painful decision of choosing what file to delete so I could save a new song or image. I had the luck to grow with early access to internet, I lived in a big city (São Paulo), and there were tons of free internet providers on the dial up era, the internet was VERY slow, but it worked. I learned about T1, and my goal for adult age was being rich enough (T1 plans were very expensive at the time) to afford it.
 
-![Photo 01](/assets/img/01.jpg)
+Twenty years later, my cellphone memory and connection speed are way higher than I could ever dream as a teenager. And the funny part is, I still worry about file size and connection speed. As a developer, I need to worry about resource consumption on the tech side, and delivering a great experience on the user side, so I need to think about all the use cases. I know that access to a good internet connection is not something you find everywhere in the world, and the same applies to good devices. On top of that, most internet plans for mobile devices are paid per band switch, and image sizes have a huge impact on that.
 
-## History
+So, how to tackle this problem?
 
-Many of the techniques of digital image processing, or digital picture processing as it often was called, were developed in the 1960s at the Jet Propulsion Laboratory, Massachusetts Institute of Technology, Bell Laboratories, University of Maryland, and a few other research facilities, with application to satellite imagery, wire-photo standards conversion, medical imaging, videophone, character recognition, and photograph enhancement. The cost of processing was fairly high, however, with the computing equipment of that era.
+These are some techniques used to solve this problem:
+- Combine similar colors, reducing the color depth of the image.
+- Remove unnecessary metadata.
+- Crop the image.
+- Convert to another file format/compression.
 
-![Photo 02](/assets/img/02.jpg)
 
-That changed in the 1970s, when digital image processing proliferated as cheaper computers and dedicated hardware became available. Images then could be processed in real time, for some dedicated problems such as television standards conversion. As general-purpose computers became faster, they started to take over the role of dedicated hardware for all but the most specialized and computer-intensive operations. With the fast computers and signal processors available in the 2000s, digital image processing has become the most common form of image processing and generally, is used because it is not only the most versatile method, but also the cheapest.
+The fastest and easiest way I've found is to use [TinyPNG][1] (actually there are 2 sites, TinyPNG and TinyJPEG. They're different only at the index page and link names, but they function the same. I'm referring only as TinyPNG because that's the e-mail address they provide for contact.
 
-![Photo 03](/assets/img/03.jpg)
+## Basic usage - WEB
 
-Digital image processing technology for medical applications was inducted into the Space Foundation Space Technology Hall of Fame in 1994.
+The basic usage is pretty simple, at the top of the index screen you will find a place to click and select (or drag and drop from your file explorer) up to 20 images with a maximum size of 5MB/each.
 
-[Wikipedia](https://en.wikipedia.org/wiki/Digital_image_processing)
+As soon as the images are uploaded, they are processed, and at the end they will be available to download. You can keep track of the 
