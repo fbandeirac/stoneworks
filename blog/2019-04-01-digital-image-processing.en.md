@@ -17,16 +17,22 @@ Twenty years later, my cellphone memory and connection speed are way higher than
 So, how to tackle this problem?
 
 These are some techniques used to solve this problem:
-- Combine similar colors, reducing the color depth of the image.
-- Remove unnecessary metadata.
-- Crop the image.
-- Convert to another file format/compression.
 
+* Combine similar colors, reducing the color depth of the image.
+* Remove unnecessary metadata.
+* Crop the image.
+* Convert to another file format/compression.
 
-The fastest and easiest way I've found is to use [TinyPNG][1] (actually there are 2 sites, TinyPNG and TinyJPEG. They're different only at the index page and link names, but they function the same. I'm referring only as TinyPNG because that's the e-mail address they provide for contact.
+The fastest and easiest way I've found is to use a very versatile tool called \[TinyPNG].
+
+## TinyPNG
+
+TinyPNG is a tool for shrinking images with a few more options, like resizing, detection of area of interest, saving at Amazon AWS, Google Cloud and DropBox, and a few more. There's a web implementation, add-ons for several CMS and tools, and an API for our development needs.
+
+TinyPNG has an almost identical twin, TinyJPEG. They're different only at the index page and link names, but they function the same. I'm referring only as TinyPNG because that's the e-mail address they provide for contact.
 
 ## Basic usage - WEB
 
-The basic usage is pretty simple, at the top of the index screen you will find a place to click and select (or drag and drop from your file explorer) up to 20 images with a maximum size of 5MB/each.
+The basic usage is pretty simple, at the top of the index screen you will find a place to click and select (or drag and drop from your file explorer) up to 20 images with a maximum size of 5MB/each. After uploading they process the images and make it available to download, also some interesting info about the images are shown, like size before/after and compressing percentage of individual files and total files. If there's many images, you can download them all in a zip file.
 
-As soon as the images are uploaded, they are processed, and at the end they will be available to download. You can keep track of the 
+![TinyPNG Web Interface](/assets/img/test.png "TinyPNG Web Interface")
