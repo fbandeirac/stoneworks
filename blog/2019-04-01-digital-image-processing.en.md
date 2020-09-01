@@ -23,11 +23,11 @@ These are some techniques used to solve this problem:
 * Crop the image.
 * Convert to another file format/compression.
 
-The fastest and easiest way I've found is to use a very versatile tool called \[TinyPNG].
+The fastest and easiest way I've found is to use a very versatile tool called [TinyPNG][1].
 
 ## TinyPNG
 
-TinyPNG is a tool for shrinking images with a few more options, like resizing, detection of area of interest, saving at Amazon AWS, Google Cloud and DropBox, and a few more. There's a web implementation, add-ons for several CMS and tools, and an API for our development needs.
+TinyPNG is a tool for shrinking images with some nicee options like resizing, detection of area of interest, saving at Amazon S3, Google Cloud and DropBox, and a few more tricks. There's a web implementation, add-ons for several CMS and tools, and an API for our development needs.
 
 TinyPNG has an almost identical twin, TinyJPEG. They're different only at the index page and link names, but they function the same. I'm referring only as TinyPNG because that's the e-mail address they provide for contact.
 
