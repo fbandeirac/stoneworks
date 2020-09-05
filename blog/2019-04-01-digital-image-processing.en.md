@@ -27,13 +27,13 @@ The fastest and easiest way I've found to solve most of these problems is to use
 
 ## TinyPNG
 
-TinyPNG is a tool for shrinking images with some nicee options like resizing, detection of area of interest(very useful when dealing with avatars), saving at Amazon S3, Google Cloud and DropBox, and a few more tricks. There's a web implementation, add-ons for several CMS and tools, and an API for our development needs.
+TinyPNG is a tool for shrinking images with some nice options like resizing, detection of area of interest(very useful when dealing with avatars), saving at Amazon S3, Google Cloud and DropBox, and a few more tricks. There's a web implementation, add-ons for several CMS and tools, and an API for our development needs.
 
 TinyPNG site has an almost identical twin, TinyJPEG. They're different only at the index page and link names, but they function the same. I'm referring only as TinyPNG because that's the e-mail address they provide for contact.
 
 ### Basic usage - WEB
 
-The basic usage is pretty simple, at the top of the index screen we find a place to click and select (or drag and drop from your file explorer) up to 20 images with a maximum size of 5MB/each. After the upload is completed, the images are shrinked (all metadata is removed and similar colors are combined) and made available to download or save to dropbox, also some interesting info about the images are shown, like size before/after and compressing percentage of individual files and total files. If you uploaded more than one image, you can download them all in a zip file.
+The basic usage is pretty simple, at the top of the index page there's a big area to click & select or drag & drop up to 20 images with a maximum size of 5MB/each. After the upload is completed, the images are processed (all metadata is removed and similar colors are combined) and made available to download or save to dropbox. Some interesting info about the images are shown, like size before/after and compressing percentage of individual files and total files. If you uploaded more than one image, you can download them all in a zip file.
 
 ![TinyPNG Web Interface](/assets/img/test.png "TinyPNG Web Interface")
 
