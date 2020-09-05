@@ -3,7 +3,7 @@ title: Shrinking image sizes
 description: >-
   How to use TinyPNG/TinyJPEG to shrink image sizes without (or minimal) quality
   loss.
-date: '2020-08-30 01:41:00'
+date: '2020-09-05 01:41:00'
 image: /assets/img/tinijpg.png
 category: Images
 background: '#079992'
