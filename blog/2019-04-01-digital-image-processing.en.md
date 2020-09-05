@@ -97,11 +97,21 @@ The [API Reference][4] have a more profound description of all the features, als
 
 If you're interested in checking out the [original image][8] used in these examples and comparing the results, it's a [beautiful picture][8] by [Priscilla Du Preez][7]. Check out her work, is awesome!
 
+### Third-Party
 
+A cool thing about TinyPNG is that they keep a section for [third-party solutions][5]. This section contains free and paid solutions, which must be categorized in:
+- [**Content Management**][9]
+- [**Desktop**][10]
+- [**Development**][11]
+- [**E-Commerce**][12]
 
+Each developer/company is responsible for its product and implementation, so if you're interested in any of them, TinyPNG won't be able to help.
 
+### Other solutions
 
+TinyPNG offer a some other products, like a Photoshop Plugin for your compressing needs, their own CDN and an analyzer that quickly checks a site for images and how much TinyPNG can help improve it's performance.
 
+I hope you find this post useful, and if there's anything wrong in it or any info you believe should be added, please contact me.
 
 [1]: (https://tinypng.com)
 [2]: (https://tinyjpg.com)
@@ -111,3 +121,7 @@ If you're interested in checking out the [original image][8] used in these examp
 [6]: (https://curl.haxx.se/)
 [7]: (https://unsplash.com/@priscilladupreez)
 [8]: (https://unsplash.com/photos/HhCANDrFzZ0)
+[9]: (https://tinyjpg.com/third-party#content-management)
+[10]: (https://tinyjpg.com/third-party#desktop)
+[11]: (https://tinyjpg.com/third-party#development)
+[12]: (https://tinyjpg.com/third-party#e-commerce)
