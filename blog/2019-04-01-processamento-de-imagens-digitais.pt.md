@@ -95,22 +95,33 @@ curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:S
 
 Existem algumas outras opções de requisição que vão tornar a vida mais fácil, realizando redimensionamento ou cortando durante o processamento. Eles são: `scale` (escala), `cover` (capa) e `thumb` (miniatura).
 
-Outra opção interessante é a possibilidade de preservar os metadados como copyright (direitos autorais), creation (criação) and location (localização). É importante salientar que preservar os metadados vai aumentar um pouco o tamanho do arquivo final. Neste exemplo estaremos solicitando a preservação da `location` (localização) e `creation` (criação) and:
+Outra opção interessante é a possibilidade de preservar os metadados como copyright (direitos autorais), creation (criação) and location (localização). É importante salientar que preservar os metadados vai aumentar um pouco o tamanho do arquivo final. Neste exemplo estaremos solicitando a preservação das tags `location` (localização) e `creation` (criação):
 
 ```
-curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:YOUR_TOKEN_KEY --header "Content-Type: application/json" --data '{ "preserve": ["location", "creation"] }' --output small_metadata.jpg
+curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:SUA_CHAVE --header "Content-Type: application/json" --data '{ "preserve": ["location", "creation"] }' --output small_metadata.jpg
 ```
 
-The [API Reference][4] have a more profound description of all the features, also examples for integration with Amazon S3 and Google Cloud Storage.
-If you're interested in checking out the [original image][8] used in these examples and comparing the results, it's a [beautiful picture][8] by [Priscilla Du Preez][7]. Check out her work, is awesome!
-### Third-Party
-A cool thing about TinyPNG is that they keep a section for [third-party solutions][5]. This section contains free and paid solutions, which must be categorized in:- [**Content Management**][9]- [**Desktop**][10]- [**Development**][11]- [**E-Commerce**][12]
-Each developer/company is responsible for its product and implementation, so if you're interested in any of them, TinyPNG won't be able to help.
-### Other solutions
-TinyPNG offer a some other products, like a Photoshop Plugin for your compressing needs, their own CDN and an analyzer that quickly checks a site for images and how much TinyPNG can help improve it's performance.
+O [Manual da API][4] possui uma descrição mais profunda de todas as opções, bem como exemplos de integração com o Amazon S3 e Google Cloud Storage.
+
+Se você tem interesse em conferir a [imagem original][8] utilizada nos exemplos e comparar os resultados, é uma [belíssima foto][8] tirada por [Priscilla Du Preez][7]. Dê uma olhada no trabalho dela, é incrível!
+
+### Terceiros
+
+Uma coisa legal do TinyPNG é que eles mantém uma seção no site para [soluções de terceiros][5]. Essa seção contém soluções gratuitas e pagas, que são categorizadas em:
+- [**Content Management**][9] - Gerenciadores de conteúdo (CMS)
+- [**Desktop**][10] - Aplicações desktop com interface de usuário
+- [**Development**][11] - Aplicações voltadas para desenvolvedores, como CLIs
+- [**E-Commerce**][12] - Add-ons para plataformas de E-Commerce
+
+Cada desenvolvedor/empresa é responsável pelo seu produto e implementação, portanto se você tem interesse em algum deles, o pessoal do TinyPNG não vai poder te ajudar.
+
+### Outras Soluções
+
+O TinyPNG oferece alguns outros produtos, como um plugin de compressão de imagens para Photoshop, sua própria CDN, e um analisador que verifica rapidamente as imagens de um site e retorna o quanto o TinyPNG poderia ajudar a melhorar a performance.
+
 ---
-I hope you find this post useful and if you have any questions, comments or recommendations, feel free to contact me.
 
+Espero que tenha achado essa postagem útil, e se tiver alguma dúvida, comentário ou recomendação, fique à vontade para entrar em contato.
 
 [1]: (https://tinypng.com)
 [2]: (https://tinyjpg.com)
