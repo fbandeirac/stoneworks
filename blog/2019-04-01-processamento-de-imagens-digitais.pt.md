@@ -10,7 +10,7 @@ background: '#079992'
 ---
 A tecnologia evolui tão rápido, a maior parte das vezes nem temos tempo de assimilar corretamente a situação atual que algo novo aparece para nos manter constantemente impressionados.
 
-Eu sou do tempo em que o disquete de 1.44MB era uma inovação incrivel, um dispositivo menor e com cerca do dobro da capacidade dos outros disquetes que conhecia! Me lembro quando meu sonho era possuir um HD com 1TB de capacidade, acreditava que poderia salvar tudo o que eu poderia querer, e nunca mais teria que passar pela difícil situação de decidir qual arquivo escluir para salvar uma nova imagem ou música.
+Eu sou do tempo em que o disquete de 1.44MB era uma inovação incrivel, um dispositivo menor e com cerca do dobro da capacidade dos outros disquetes que conhecia! Me lembro quando meu sonho era possuir um HD com 1TB de capacidade, acreditava que poderia salvar tudo o que eu poderia querer, e nunca mais teria que passar pela difícil situação de decidir qual arquivo excluir para salvar uma nova imagem ou música.
 
 Tive a sorte de crescer com acesso à internet, morei em uma cidade grande (São Paulo) onde existiam muitos provedores gratuitos de internet na era da internet discada, a conexão era EXTREMAMENTE lenta, mas funcionava. Um dia descobri sobre as conexões T1, e o meu objetivo para a vida adulta se tornou ser rico o suficiente para poder pagar por elas (essas conexões eram muito caras na época, somente grandes empresas possuíam).
 
@@ -18,7 +18,7 @@ Vinte anos depois, a memória do meu celular e a velocidade de conexão são mui
 
 Como desenvolvedor, tenho que analisar a parte técnica e o consumo de recursos da aplicação, mas também preciso analisar o lado do usuário, pensando em entregar a melhor experiência possível. Sei que acesso à internet de qualidade ainda não é algo comum no mundo todo, e o mesmo se aplica para dispositivos de qualidade. Em cima disso, ainda tenho que considerar que a maioria dos planos de internet para celular tem limite de dados, e o tamanho das imagens tem um grande impacto nisso.
 
-Então, como enfrentar esse problema do tamho da imagem?
+Então, como enfrentar esse problema do tamanho da imagem?
 
 Existem algumas técnicas utilizadas para resolver esse problema:
 
@@ -35,7 +35,7 @@ A maneira mais rápida e fácil que encontrei para resolver a maioria desses pro
 ## TinyPNG
 [TinyPNG][1] é uma ferramenta para diminuir imagens com algumas opções interessantes, como redimensionar, detecção de área de interesse (muito útil quando lidamos com avatares),salvar na Amazon S3, Google Cloud e DropBox, e mais alguns truques. Existe uma implementação web, add-ons para vários CMS e ferramentas, e uma API para as nossas necessidades de desenvolvimento. 
 
-O site do [TinyPNG][1] tem um gêmeo quase idêntico, o [TinyJPEG][2]. Eles são diferentes apenas na página inicial e nos nomes dos links, mas a funcionalidade é a mesma. Estarei me referindo apenas como TinyPNG poeque é como está no e-mail que eles disponibilizam para contato em ambas as versões do site.
+O site do [TinyPNG][1] tem um gêmeo quase idêntico, o [TinyJPEG][2]. Eles são diferentes apenas na página inicial e nos nomes dos links, mas a funcionalidade é a mesma. Estarei me referindo apenas como TinyPNG porque é como está no e-mail que eles disponibilizam para contato em ambas as versões do site.
 
 Você pode estar se perguntando: "Mas o quão boa é essa ferramenta?"
 
@@ -95,7 +95,7 @@ curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:S
 
 Existem algumas outras opções de requisição que vão tornar a vida mais fácil, realizando redimensionamento ou cortando durante o processamento. Eles são: `scale` (escala), `cover` (capa) e `thumb` (miniatura).
 
-Outra opção interessante é a possibilidade de preservar os metadados como copyright (direitos autorais), creation (criação) and location (localização). É importante salientar que preservar os metadados vai aumentar um pouco o tamanho do arquivo final. Neste exemplo estaremos solicitando a preservação das tags `location` (localização) e `creation` (criação):
+Outra opção interessante é a possibilidade de preservar os metadados como copyright (direitos autorais), creation (criação) e location (localização). É importante salientar que preservar os metadados vai aumentar um pouco o tamanho do arquivo final. Neste exemplo estaremos solicitando a preservação das tags `location` (localização) e `creation` (criação):
 
 ```
 curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:SUA_CHAVE --header "Content-Type: application/json" --data '{ "preserve": ["location", "creation"] }' --output small_metadata.jpg
