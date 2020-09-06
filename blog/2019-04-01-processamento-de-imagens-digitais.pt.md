@@ -1,9 +1,8 @@
 ---
 title: Diminuindo o tamanho das imagens
 description: >-
-  Na ciência da computação, o processamento de imagem digital é o uso de
-  algoritmos de computador para executar o processamento de imagens em imagens
-  digitais.
+  Como utilizar o TyniPNG/TinyJPEG para diminuir o tamanho das imagens sem
+  perder drasticamente a qualidade.
 date: '2020-09-05 07:41:34'
 image: /assets/img/tinijpg.png
 category: Images
@@ -56,13 +55,53 @@ A captura de tela abaixo é a versão comprimida da captura de tela original rea
 
 ### Recursos extras - API
 
-A API é bem construída e simples de utilizar. Ela requer uma chave de uso, que pode ser obtida facilmente [aqui][3]. 
-In the following examples I'm using [curl][6] from the terminal for my requests. The image file is in the same directory, if the image is in a different directory, you must provide the correct path. The `YOUR_TOKEN_KEY` should be exchanged by the token you received from TinyPNG.
-Let's take a look at some use cases. In the example below I'm sending an image with no special parameters, like would happen with the web usage.
-```curl https://api.tinify.com/shrink --user api:YOUR_TOKEN_KEY --data-binary @big_image.jpg ```After processing we get the following JSON as a response (it's not pretty like that, the code below is formatted for better readability):```{  "input":{    "size":3427751,    "type":"image/jpeg"  },  "output":{    "size":1372446,    "type":"image/jpeg",    "width":5252,    "height":3488,    "ratio":0.4004,    "url":"https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j"  }```There's some interesting and useful info on our response. We have file and image sizes, file type, ratio of compression and a URL where we can download our image. This URL is accessible by browser or we can retrieve the image through curl, wget or any other desirable way. The processed file gets a random name, *fdpe0qjwmuh7q526177gwyezkp0ctg4j* in this case.
-To save it with a specific name, we can use```curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --output small_image.jpg```Now, if we want to resize the image, we don't need to upload it again, we use a different request with the file we want, and a small JSON with what we need in key value pairs. In this case, I'm asking to resize the image to 150x100 pixels.```curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:YOUR_TOKEN_KEY --header "Content-Type: application/json" --data '{ "resize": { "method": "fit", "width": 150, "height": 100 } }' --output small_resized.jpg```
-There are some other request options that make life easier by resizing or cuttin on the fly. They are: `scale`, `cover` and `thumb`.
-Another interesting option is to preserve metadata like copyright, creation and location. It's important to notice that preserving metadata will raise a little the file size. In this example we are preserving `location` and `creation`:```curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:YOUR_TOKEN_KEY --header "Content-Type: application/json" --data '{ "preserve": ["location", "creation"] }' --output small_metadata.jpg```The [API Reference][4] have a more profound description of all the features, also examples for integration with Amazon S3 and Google Cloud Storage.
+A API é bem construída e simples de utilizar. Ela requer uma chave de autenticação (token), que pode ser obtida facilmente [aqui][3].
+
+Nos exemplos a seguir vou utilizar o [curl][6] a partir do terminal para as minhas requisições. A os arquivos de imagem estão no mesmo diretório, se a imagem estiver em outro diretório, deve ser utilizado o caminho adequado. Onde está escrito `SUA_CHAVE` deve ser trocada pela chave de autenticação que você recebeu do TinyPNG.
+
+Vamos analisar alguns casos de uso. No exemplo abaixo estou enviando uma imagem sem nenhum parâmetro especial, como aconteceria na utilização pelo site.
+
+```curl https://api.tinify.com/shrink --user api:SUA_CHAVE --data-binary @big_image.jpg ```
+
+Após o processamento, recebemos o seguinte JSON como resposta (ele não vem bonitinho assim, o código abaixo está formatado para facilitar a leitura):
+
+```
+{
+  "input":{
+    "size":3427751,
+    "type":"image/jpeg"
+  },
+  "output":{
+    "size":1372446,
+    "type":"image/jpeg",
+    "width":5252,
+    "height":3488,
+    "ratio":0.4004,
+    "url":"https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j"
+  }
+```
+
+Na resposta temos algumas informações interessantes e úteis. Temos o tamanho da imagem e do arquivo, tipo de arquivo, proporção de compressão e uma URL onde podemos fazer o download da imagem. Essa URL é acessível pelo navegador, ou podemos pegar a imagem através do curl, wget ou qualquer outra forma desejada. O arquivo processado recebe um nome aleatório, *fdpe0qjwmuh7q526177gwyezkp0ctg4j* neste caso.
+
+Para escolher o nome para salvar o arquivo, podemos usar o seguinte código
+```
+curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --output small_image.jpg
+```
+
+Agora, se quisermos redimensionar a imagem, não precisamos fazer o upload novamente, podemos utilizar uma requisição diferente passando o arquivo que desejamos e um pequeno trecho no formato JSON, com a nossa solicitação em pares de chave-valor. Neste caso, estou solicitando que a imagem seja redimensionada para 150x100 pixels.
+```
+curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:SUA_CHAVE --header "Content-Type: application/json" --data '{ "resize": { "method": "fit", "width": 150, "height": 100 } }' --output small_resized.jpg
+```
+
+Existem algumas outras opções de requisição que vão tornar a vida mais fácil, realizando redimensionamento ou cortando durante o processamento. Eles são: `scale` (escala), `cover` (capa) e `thumb` (miniatura).
+
+Outra opção interessante é a possibilidade de preservar os metadados como copyright (direitos autorais), creation (criação) and location (localização). É importante salientar que preservar os metadados vai aumentar um pouco o tamanho do arquivo final. Neste exemplo estaremos solicitando a preservação da `location` (localização) e `creation` (criação) and:
+
+```
+curl https://api.tinify.com/output/fdpe0qjwmuh7q526177gwyezkp0ctg4j --user api:YOUR_TOKEN_KEY --header "Content-Type: application/json" --data '{ "preserve": ["location", "creation"] }' --output small_metadata.jpg
+```
+
+The [API Reference][4] have a more profound description of all the features, also examples for integration with Amazon S3 and Google Cloud Storage.
 If you're interested in checking out the [original image][8] used in these examples and comparing the results, it's a [beautiful picture][8] by [Priscilla Du Preez][7]. Check out her work, is awesome!
 ### Third-Party
 A cool thing about TinyPNG is that they keep a section for [third-party solutions][5]. This section contains free and paid solutions, which must be categorized in:- [**Content Management**][9]- [**Desktop**][10]- [**Development**][11]- [**E-Commerce**][12]
