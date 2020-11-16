@@ -8,20 +8,18 @@ image: /assets/img/drake_dev.png
 category: Career
 background: '#079992'
 ---
-![](/assets/img/drake_dev.png)
-
-
----
-
 Since the day I decided on the development career I stumbled on many different words and expressions, some I would just say that they are weird, especially for a non-native English speaker. While trying to make sense of a bunch of these words, I faced a brand new problem: which career I would take. Sometime later I discovered that this hole is waaaaay deeper than I thought, but let's leave this matter for another post, the 'easy' part was deciding between Frontend and Backend careers.
-
-
 
 ## Frontend x Backend
 
 Putting things simply, Frontend is the part of a software that the user sees and interacts with. Some examples are the applications on your mobile, the 'page' where you check your bank account on your computer, an online shop, etc.
 
 Backend is the part of a software that the users (usually) never even see, and they are usually addressed as 'the servers', so the server of your bank is a backend application (don't mix the computer server with the application server, the computer server is the machine, the application server is the software), the server of your game, search engine, etc.
+
+<details>
+<sumary>
+Click here for a little explanation on why things are done like that:
+</sumary>
 
 You might be asking 'Why do things like that? You now have two pieces of software to take care of! It seems so complicated to do things like that!', well, I did, and I found out that this is part of a field called Software Architecture. Yes, it is more complicated. Yes, it is harder to maintain (not always). Yes, there are a few drawbacks, but the benefits are great!
 
@@ -37,6 +35,8 @@ Also, if a bug is found, and it resides on the server-side, it can be fixed with
 
 And as I said, there are some drawbacks to this model too, if there's an issue with the internet connection, or the server itself, the application is virtually useless. There are some ways to mitigate these problems, but in some situations, there's nothing that can be done.
 
+</details>
+
 Ok, we talked about what is a frontend, a backend, the advantages and disadvantages of each one, but what is a full-stack?
 
 Well, full-stack is a word that has started many wars, and the reason is that, mostly, frontend and backend developers don't like them. At all.
@@ -49,9 +49,7 @@ The designer says: Let's remove this horrendous column from here!, to which the 
 
 This happens because they don't understand each other concerns and priorities, and if they had some meetings before, probably they wouldn't have this kind of problem. The same occurs with frontend and backend developers, who develop things according to the specifications they get, and when it comes the time to combine frontend and backend into a fully working application... the pieces don't fit. It's like having a team to develop the car body, and another the engine, and when it comes the time to assemble, the engine is too big, the size and position of the bolts are different, one blames the other and then the war begins.
 
-But at some point, a new kind of developer appeared, a person who could wear two different shoes and feel no shame, some even say that they are reminiscent of the long-gone webmasters. The _full-stack_... **dramatic lightning sounds.**
-
----
+But at some point, a new kind of developer appeared, a person who could wear two different shoes and feel no shame, some even say that they are reminiscent of the long-gone webmasters. The _full-stack_... **dramatic lightning sounds**
 
 ## Full-stack or Full-of-sh*t?
 
@@ -65,7 +63,7 @@ The developer job is always evolving, and that's what makes this job so hard and
 
 So yeah, calling these devs scammers may be suitable, but I don't believe it's right. I believe they're just inexperienced, even because I've never heard of a dev 10kw ninja transformer with more than 30 years old. They're usually young professionals who believe they're the best in the world, the most special unicorn ever.
 
-My dear reader, I'll tell you that burnout strikes without warning, It comes like a lightning, but the effects can stay for a long time. And you don't even need to be a super dev like that to be struck by this lightning.
+My dear reader, I'll tell you that when burnout strikes, it gives you no warning, It comes fast as lightning and the effects can stay for a long time. And you don't even need to be a super dev like that to be struck by this lightning.
 
 So, the full-stack is a monstrosity that should be banned from this existence? I don't think so... and no, it's not because I consider myself a full-stack... or it is?
 
@@ -77,4 +75,4 @@ The full-stack is not someone who intends to steal anyone's job, that's not a fu
 
 A developer full-stack is a generalist, is the person that will help wherever and whenever needed, tackling due tasks, improving delivery schedule, attending meetings with the client and transmitting the outcome to the teams, helping with the integration os the frontend and backend teams, translating each team's slangs and concerns, finally, removing any rough edges between teams and products. The main downside of a full-stack is that with its flexibility, there's the loss of specific knowledge. A full-stack developer will take much longer to reach a certain knowledge level on React, for example, than a front-end dev, also, will probably take some time longer to complete harder tasks. Also, the full-stack is not perfectly balanced, they will always have some more experience and affinity with the frontend or backend, a language or another, it's cyclic and varies according to the kind of project they worked on recently, and for how long. Another downside is that most companies have that wrong idea of a full-stack, so when you get a full-stack job, they will mistake you for an entire IT department. Be careful with that.
 
-I hope you enjoyed the reading and learned something new today. As always, I'm available for that nice discussion about anything said here.
+I hope you enjoyed the reading and that I was able to show you a different perspective.
