@@ -1,7 +1,7 @@
 ---
 title: Device brightness on Linux Mint
 description: Tips on how to control the brightness of your devices in Ubuntu-based systems.
-date: '2020-08-25 12:17:00'
+date: '2020-08-17 12:17:00'
 image: /assets/img/brightness.png
 category: Others
 background: '#bdc3c7'
